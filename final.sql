@@ -1,0 +1,7 @@
+SELECT 
+  FROM_TZ(TO_TIMESTAMP('1970-01-01 00:00:00', 'YYYY-MM-DD HH24:MI:SS') + NUMTODSINTERVAL(utc_timestamp, 'SECOND'), 'UTC') AT TIME ZONE 'America/New_York' AS est_time
+FROM your_table;
+
+SELECT 
+  FROM_TZ(TO_TIMESTAMP('1970-01-01 00:00:00', 'YYYY-MM-DD HH24:MI:SS') + NUMTODSINTERVAL(utc_timestamp, 'SECOND'), 'UTC') AS utc_time
+FROM your_table;
